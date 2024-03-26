@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão fujão</title>
+    <style>
+        .btn {
+            text-decoration: none;
+            color: white;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .green {
+            background: green;
+        }
+
+        .red {
+            background: red;
+            cursor: default;
+        }
+
+        div {
+            display: inline-block;
+            padding: 8px;
+            transition: transform 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Me segue no github?</h1>
+    <a href="https://github.com/ramonpsouto" target="_blank" class="btn green">Sim</a>
+	<!-- evento onmouseover -->
+    <div  onmouseover="fugir();" id="fujao" >
+        <a class="btn red">Não</a>
+    </div>
+     
+</body>
+</html>
+<script>
+    // pegando elemento pelo id
+    const fujao = document.getElementById('fujao')
+	
+    function fugir()
+    {   
+        randx = parseInt(Math.random() * 400 + 10)
+        randy = parseInt(Math.random() * 400 + 10)
+        fujao.style.transform=`translate(${randx}px, ${randy}px)`
+    }
+
+</script>

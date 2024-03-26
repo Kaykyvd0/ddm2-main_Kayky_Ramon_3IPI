@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gritador</title>
+</head>
+<body>
+    <!-- usando evento onkeyup para atualizar o parágrafo quando o usuario digitar -->
+    <input type="text" placeholder="Digite uma palavra" id="input" onkeyup="gritar();">
+    <p id="berro" style="display: block;margin-top: 8px;"></p>
+</body>
+</html>
+<script>
+    const berro = document.getElementById('berro')
+
+    function gritar()
+    {
+        // pegando inputs pelo nome da tag
+        let inputs = document.getElementsByTagName('input')
+        let palavra = inputs[0].value
+		// deixa todas as letras em caixa alta
+        berro.innerHTML = palavra.toUpperCase()
+    }
+</script>
